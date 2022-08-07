@@ -1,0 +1,7 @@
+1-change ssh port from 22 to non common port 
+2-disable ssh password login and use public key login
+3-Configure Idle Timeout Interval. 
+4-limit User's access
+5-Enable Two-Factor Authentication
+6-Allow Only Specific Clients
+7-Configure Idle Timeout Interval

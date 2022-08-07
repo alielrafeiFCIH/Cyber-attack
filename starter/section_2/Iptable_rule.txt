@@ -1,3 +1,12 @@
 # Provide your IPtables rule to block SSH access to the attacking IP address.
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+REJECT     tcp  --  192.168.56.1         anywhere             tcp dpt:ssh reject-with icmp-port-unreachable
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination 
 
 

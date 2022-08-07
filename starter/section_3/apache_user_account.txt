@@ -2,6 +2,7 @@
 
 
 #Configuration lines:
-
+User apache-user
+Group apache-group
 
 
