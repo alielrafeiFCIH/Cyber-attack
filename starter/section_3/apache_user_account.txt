@@ -2,8 +2,25 @@
 
 
 #Configuration lines:
-User apache-user
-Group apache-group
+sudo useradd -m -d /var/www/html/ apache-user
+sudo passwd apache-user
+sudo groupadd apache-group
+sudo usermod -g apache-group apache-user
+
+sudo chown -R apache-user /var/www/html/*
+sudo chgrp -R nim /var/www/html/*
+
+sudo chown -R apache-user /var/lock/apache2
+sudo chgrp -R apache-group /var/lock/apache2
+
+sudo chown -R apache-user /var/log/apache2
+sudo chgrp -R apache-group /var/log/apache2
+
+sudo chown -R ubuntu:ubuntu /var/www/html/ossec
+sudo chown ubuntu:ubuntu /var/www/html/
+export APACHE_RUN_USER=apache-user
+export APACHE_RUN_GROUP=apache-group
+
 
 
 
